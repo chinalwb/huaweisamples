@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.wliu.huawei.samples.MainActivity">
+
+    <com.wliu.huawei.samples.sun_rise_set.SunRiseSetView
+        android:id="@+id/sunrisesetview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sunrisesetview"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/suntext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:text="拖动改变太阳角度" />
+
+        <SeekBar
+            android:id="@+id/sunseekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/suntext"
+            android:max="160"
+            android:progress="0"
+            android:min="0"
+
+            />
+
+        <TextView
+            android:id="@+id/pathtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sunseekbar"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/colorAccent"
+            android:text="拖动改变太阳路径" />
+
+        <SeekBar
+            android:id="@+id/pathseekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pathtext"
+            android:max="60"
+            android:progress="10"
+            android:min="0"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
